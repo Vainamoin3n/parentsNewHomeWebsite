@@ -16,16 +16,13 @@ import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient();
 
-// Get the base URL from the import.meta.env or use the hardcoded value for GitHub Pages
-const baseUrl = import.meta.env.BASE_URL || '/parentsNewHomeWebsite/';
-
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <LanguageProvider>
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter basename={baseUrl}>
+        <BrowserRouter>
           <div className="flex flex-col min-h-screen">
             <Navbar />
             <main className="flex-grow">

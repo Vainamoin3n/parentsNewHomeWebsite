@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useLanguage } from '@/context/LanguageContext';
-import { Bed, Tv, Utensils, Bath, Bike, Car, MapPin } from 'lucide-react';
+import { Bed, Tv, Kitchen, Shower, Bike, Parking, MapPin } from 'lucide-react';
 
 const AmenitiesList: React.FC = () => {
   const { t } = useLanguage();
@@ -16,7 +16,7 @@ const AmenitiesList: React.FC = () => {
         </h3>
         <ul className="space-y-3">
           <li className="flex items-start">
-            <Utensils className="h-5 w-5 mr-3 text-coastal-600 mt-0.5" />
+            <Kitchen className="h-5 w-5 mr-3 text-coastal-600 mt-0.5" />
             <span>{t('amenities.kitchen')}</span>
           </li>
           <li className="flex items-start">
@@ -28,7 +28,7 @@ const AmenitiesList: React.FC = () => {
             <span>{t('amenities.bedroom1')}</span>
           </li>
           <li className="flex items-start">
-            <Bath className="h-5 w-5 mr-3 text-coastal-600 mt-0.5" />
+            <Shower className="h-5 w-5 mr-3 text-coastal-600 mt-0.5" />
             <span>{t('amenities.bathroom1')}</span>
           </li>
         </ul>
@@ -68,7 +68,7 @@ const AmenitiesList: React.FC = () => {
             <span>{t('amenities.terrace')}</span>
           </li>
           <li className="flex items-start">
-            <Car className="h-5 w-5 mr-3 text-coastal-600 mt-0.5" />
+            <Parking className="h-5 w-5 mr-3 text-coastal-600 mt-0.5" />
             <span>{t('amenities.parking')}</span>
           </li>
           <li className="flex items-start">
