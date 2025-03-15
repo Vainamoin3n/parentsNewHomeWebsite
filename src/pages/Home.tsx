@@ -1,9 +1,8 @@
-
 import React from 'react';
 import { useLanguage } from '@/context/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { MapPin, Bed, Tree } from 'lucide-react';
+import { MapPin, Bed, Trees } from 'lucide-react';
 
 const Home: React.FC = () => {
   const { t } = useLanguage();
@@ -73,7 +72,7 @@ const Home: React.FC = () => {
               
               <div className="amenity-card transition-transform hover:-translate-y-2">
                 <div className="text-coastal-600 mb-4">
-                  <Tree className="h-10 w-10 mx-auto" />
+                  <Trees className="h-10 w-10 mx-auto" />
                 </div>
                 <h3 className="text-xl font-playfair font-semibold mb-2">
                   {t('home.feature3_title')}
