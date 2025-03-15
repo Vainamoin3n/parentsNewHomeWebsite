@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  base: "/parentsNewHomeWebsite/", // Set the base path for GitHub Pages
+  base: "/pentykerjanot/", // Set the base path for GitHub Pages
   plugins: [
     react(),
     mode === 'development' &&
