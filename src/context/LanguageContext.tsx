@@ -149,8 +149,8 @@ const translations: Translations = {
     faq2_a_en: 'Yes, a security deposit of 500 € is required upon arrival and returned at departure if no damage is found.',
     faq3_q_fr: 'Le linge de maison est-il fourni?',
     faq3_q_en: 'Is household linen provided?',
-    faq3_a_fr: 'Les draps et serviettes ne sont pas fournis. Veuillez apporter les vôtres ou nous contacter à l\'avance pour la location.',
-    faq3_a_en: 'Sheets and towels are not provided. Please bring your own or contact us in advance for rental.',
+    faq3_a_fr: 'Les draps et serviettes sont fournis.',
+    faq3_a_en: 'Sheets and towels are provided.',
   },
   location: {
     title_fr: 'Emplacement & Activités à proximité',
