@@ -195,28 +195,30 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export const LanguageProvider: React.FC<{children: ReactNode}> = ({ children }) => {
   const [language, setLanguage] = useState<Language>('fr');
 
+  // Fixed translation function
   const t = (key: string): string => {
-    const langKey = `${key}_${language}`;
-    
     // Split the key by dots to access nested properties
-    const keyParts = langKey.split('.');
-    let translationObj = translations;
-    
-    // Handle nested keys (e.g., 'navbar.home')
-    if (keyParts.length > 1) {
-      const section = keyParts[0];
-      const subKey = `${keyParts[1]}_${language}`;
-      return translationObj[section]?.[subKey] || langKey;
+    const parts = key.split('.');
+    if (parts.length !== 2) {
+      console.error(`Invalid translation key format: ${key}. Expected format: 'section.key'`);
+      return key;
     }
     
-    // Handle flat keys
-    for (const section in translationObj) {
-      if (translationObj[section][langKey]) {
-        return translationObj[section][langKey];
-      }
+    const section = parts[0];
+    const translationKey = `${parts[1]}_${language}`;
+    
+    if (!translations[section]) {
+      console.error(`Translation section not found: ${section}`);
+      return key;
     }
     
-    return langKey;
+    const translatedText = translations[section][translationKey];
+    if (!translatedText) {
+      console.error(`Translation not found for key: ${translationKey} in section: ${section}`);
+      return key;
+    }
+    
+    return translatedText;
   };
 
   return (
